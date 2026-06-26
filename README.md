@@ -59,8 +59,13 @@ src/
 │   │
 │   ├── terrain/
 │   │   ├── height.py
-│   │   ├── erosion.py
-│   │   └── rivers.py
+│   │   ├── uplift.py
+│   │   └── erosion.py
+│   │
+│   ├── hydrology/
+│   │   ├── rivers.py
+│   │   ├── lakes.py
+│   │   └── groundwater.py
 │   │
 │   ├── climate/
 │   │   ├── wind.py

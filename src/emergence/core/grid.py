@@ -12,6 +12,17 @@ class Grid:
             and 
             0 <= y < self.height
         )
+    
+    def lonlat_to_xy(self, lon: float, lat: float) -> tuple[int, int]: 
+        x = int((lon + 180) / 360 * self.width)
+        y = int((90 - lat) / 180 * self.height)
+        return x, y
+
+    # use the center of a cell: (x + 0.5), (y + 0.5)
+    def xy_to_lonlat(self, x: int, y: int) -> tuple[float, float]: 
+        lon = (x + 0.5) / self.width * 360 - 180
+        lat = 90 - (y + 0.5) / self.height * 180 
+        return lon, lat
 
 # Indixes and Coordinates: 
 # a grid stores indices and coordinates and manages conversion between them. 
